@@ -1,6 +1,7 @@
 import React from 'react'
 import capture from './Capture.PNG'
 import clov from './clov.jpeg'
+import fk from './fk.svg'
 
 const Home = (props) => {
     const { dark, hcolor } = props;
@@ -13,10 +14,9 @@ const Home = (props) => {
                     <div className="col-md-8 col-lg-6 col-9">
                         <h3 className="fs-2 mb-3">Yash Saini</h3>
                         <h5 className={`text-${hcolor}`} >Frontend Developer, and a Student</h5>
-                        <p className="py-3 " style={{lineHeight: "27px"}}>Building Web apps, proficient in Frontend  &<br />Developing  <br />Creative  & Responsive Design
+                        <p className="py-3 " style={{ lineHeight: "27px" }}>Building Web apps, proficient in Frontend  &<br />Developing  <br />Creative  & Responsive Design
                             <br />
 
-                            {/* on my blog sometimes. */}
                         </p>
                     </div>
 
@@ -61,25 +61,29 @@ const Home = (props) => {
 
             <div className="container mt-md-4 py-4 px-3 project" id='project'>
                 <h3>Featured Projects</h3>
-                <div className="row justify-content-center ">
-
-                    <div className="col-md-6 col-lg-6 col-8 mt-4 mt-md-2 border-gradient text-center mx-3 align-self-center py-3 px-0 ">
-
+                
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active" data-bs-interval="10000">
                         <a href="https://clover-stream.netlify.app" target="_blank" rel="noopener noreferrer" className="">
+                            <img src={clov} alt='project' className="img-fluid" style={{ border: "4px solid snow", height: "10rem", width: "18rem" }}></img>
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                        <a href="https://fakeshop-ecom.netlify.app/" target="_blank" rel="noopener noreferrer" className="">
+                            <img src={fk} alt='project' className="img-fluid" style={{ height: "10rem",width:'15rem'}}></img>
+                            </a>
+                        </div>
 
-                            <span className={`text-${dark === "light" ? "dark" : "light"}`}><h4>Clover - MERN</h4></span>
-                            <p className="mb-0 mt-2"> 
-                            <img src={clov} alt='project' className="img-fluid" style={{border: "4px solid snow", height: "10rem",    width: "18rem"}}
-                            ></img></p></a>
                     </div>
-                    {/* <div className="col-md-4  col-8 mt-4 mt-md-2 border-gradient text-center mx-3 align-self-center py-3 px-0">
-
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="">
-                            <span className={`text-${dark === "light" ? "dark" : "light"}`}>Vault3</span>
-                            <p className="mb-0">  Your safest decentralized vault</p></a>
-                    </div> */}
-
-
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
 
@@ -91,9 +95,9 @@ const Home = (props) => {
                 <h3>Get in touch</h3>
                 <div className="d-flex justify-content-center align-items-center my-2 links">
                     <a href="https://github.com/yash-189" className="m-2 text-white"><i className="fa-2xl fa-brands fa-github-square"
-                     style={{color:dark === "dark" ? "#fff":"#000000"}}></i></a>
-                    <a href="https://www.linkedin.com/in/yash-saini9/" className="m-2 text-white"><i className="fa-2xl fa-brands fa-linkedin" style={{color:dark === "dark" ? "#fff":"#000000"}}></i></a>
-                    <a href="mailto:yashsaini189@gmail.com.com" className="m-2 text-white"><i className="fa-2xl fa-solid fa-square-envelope" style={{color:dark === "dark" ? "#fff":"#000000"}}></i></a>
+                        style={{ color: dark === "dark" ? "#fff" : "#000000" }}></i></a>
+                    <a href="https://www.linkedin.com/in/yash-saini9/" className="m-2 text-white"><i className="fa-2xl fa-brands fa-linkedin" style={{ color: dark === "dark" ? "#fff" : "#000000" }}></i></a>
+                    <a href="mailto:yashsaini189@gmail.com.com" className="m-2 text-white"><i className="fa-2xl fa-solid fa-square-envelope" style={{ color: dark === "dark" ? "#fff" : "#000000" }}></i></a>
 
 
                 </div>
